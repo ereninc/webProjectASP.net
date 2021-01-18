@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odev2bekap", "Odev2\Odev2bekap.csproj", "{7A8AEFF8-7CC9-4B12-BA3E-BB66472FB292}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A8AEFF8-7CC9-4B12-BA3E-BB66472FB292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A8AEFF8-7CC9-4B12-BA3E-BB66472FB292}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A8AEFF8-7CC9-4B12-BA3E-BB66472FB292}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A8AEFF8-7CC9-4B12-BA3E-BB66472FB292}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9207EFD-6202-49A6-9554-F524E7C3F50D}
+	EndGlobalSection
+EndGlobal

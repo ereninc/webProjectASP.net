@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "UrunEkle";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form action="/Home/UrunEkle" name="contact_form" id="contact_form" method="post" class="form-horizontal">
+                @Html.AntiForgeryToken()
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Ürün:</label>
+                    <div class="col-sm-10 animated-form-control">
+                        <input type="text" name="urun" class="text form-control" id="Form_Form_name" required="required" aria-required="true">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Adet:</label>
+                    <div class="col-sm-10 animated-form-control">
+                        <input type="text" name="adet" class="form-control" required="required">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Fiyat:</label>
+                    <div class="col-sm-10 animated-form-control">
+                        <input type="text" name="fiyat" class="form-control" required="required">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <br>
+                    <div class="col-12">
+                        <button type="submit" id="submit_btn" class="btn btn-primary float-right">Stok Ekle</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-1">
+
+        </div>
+
+        <div class="col-sm-2">
+            <label for="usr">Kategori seçin:</label><br><br>
+            <select>
+                <option value="1">İçecek</option>
+                <option value="2">Yiyecek</option>
+                <option value="3">Tatlı</option>
+            </select>
+        </div>
+
+        <div class="col-sm-4">
+            <img class="img-fluid" src="..\Content\images\coffee.png" alt="Logo" width="450" height="10">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,90 @@
+﻿@model Odev2.Models.users
+@{
+    ViewBag.Title = "Giris";
+
+}
+
+@using (Html.BeginForm())
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-12">
+                <section class="login-form">
+                    <h1>Giriş</h1>
+                    <div class="row">
+
+                        <div class="col-xs-10 offset-xs-1 col-sm-6 offset-sm-3">
+                            <form class="form">
+                                <div class="form-group mb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                        </div>
+                                        <div class="animated-form-control">
+                                            @Html.TextBoxFor(model => Model.user_name, htmlAttributes: new { @class = "text form-control", @placeholder = "Kullanıcı Adı", @required = "required" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                        </div>
+                                        <div class="animated-form-control">
+                                            @Html.TextBoxFor(model => Model.user_pass, htmlAttributes: new { @class = "text form-control", @placeholder = "Şifre", @type = "Password", @required = "required" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button style="margin-left:+20px;" type="submit" class="btn btn-primary float-right">Giriş</button> 
+
+                                    <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">Kayıt</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+}
+@*-----------------------------MODAL----------------------------------*@
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Kayıt Formu</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+            </div>
+            <div class="modal-body">
+                <form action="/Home/InsertUser" method="post">
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">İsim</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="name" aria-describedby="emailHelp" placeholder="İsminiz">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email </label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" name="mail" aria-describedby="emailHelp" placeholder="Email Adresiniz">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Şifre</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="pass" placeholder="Şifreniz">
+                    </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-custom">Kaydet</button>
+            </div>
+            </form>
+        </div>
+
+    </div>
+</div>
